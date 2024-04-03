@@ -1,0 +1,282 @@
+[
+  {
+    "name": "Albedo",
+    "weapon": "sword",
+    "element": "geo",
+    "rarity": 5,
+    "image": "images/Albedo_Icon.png"
+  },
+  {
+    "name": "Alhaitham",
+    "weapon": "sword",
+    "element": "dendro",
+    "rarity": 5,
+    "image": "images/Alhaitham_Icon.png"
+  },
+  {
+    "name": "Ayaka",
+    "weapon": "sword",
+    "element": "cryo",
+    "rarity": 5,
+    "image": "images/Kamisato_Ayaka_Icon.png"
+  },
+  {
+    "name": "Ayato",
+    "weapon": "sword",
+    "element": "cryo",
+    "rarity": 5,
+    "image": "images/Kamisato_Ayato_Icon.png"
+  },
+  {
+    "name": "Baizhu",
+    "weapon": "catalyst",
+    "element": "dendro",
+    "rarity": 5,
+    "image": "images/Baizhu_Icon.png"
+  },
+  {
+    "name": "Childe",
+    "weapon": "bow",
+    "element": "hydro",
+    "rarity": 5,
+    "image": "images/Tartaglia_Icon.png"
+  },
+  {
+    "name": "Chiori",
+    "weapon": "sword",
+    "element": "geo",
+    "rarity": 5,
+    "image": "images/Chiori_Icon.png"
+  },
+  {
+    "name": "Cyno",
+    "weapon": "polearm",
+    "element": "electro",
+    "rarity": 5,
+    "image": "images/Cyno_Icon.png"
+  },
+  {
+    "name": "Dehya",
+    "weapon": "claymore",
+    "element": "pyro",
+    "rarity": 5,
+    "image": "images/Dehya_Icon.png"
+  },
+  {
+    "name": "Diluc",
+    "weapon": "claymore",
+    "element": "pyro",
+    "rarity": 5,
+    "image": "images/Diluc_Icon.png"
+  },
+  {
+    "name": "Eula",
+    "weapon": "claymore",
+    "element": "cryo",
+    "rarity": 5,
+    "image": "images/Eula_Icon.png"
+  },
+  {
+    "name": "Furina",
+    "weapon": "sword",
+    "element": "hydro",
+    "rarity": 5,
+    "image": "images/Furina_Icon.png"
+  },
+  {
+    "name": "Ganyu",
+    "weapon": "bow",
+    "element": "cryo",
+    "rarity": 5,
+    "image": "images/Ganyu_Icon.png"
+  },
+  {
+    "name": "Hu Tao",
+    "weapon": "polearm",
+    "element": "pyro",
+    "rarity": 5,
+    "image": "images/Hu_Tao_Icon.png"
+  },
+  {
+    "name": "Itto",
+    "weapon": "claymore",
+    "element": "geo",
+    "rarity": 5,
+    "image": "images/Arataki_Itto_Icon.png"
+  },
+  {
+    "name": "Jean",
+    "weapon": "sword",
+    "element": "anemo",
+    "rarity": 5,
+    "image": "images/Jean_Icon.png"
+  },
+  {
+    "name": "Kazuha",
+    "weapon": "sword",
+    "element": "anemo",
+    "rarity": 5,
+    "image": "images/Kaedehara_Kazuha_Icon.png"
+  },
+  {
+    "name": "Keqing",
+    "weapon": "sword",
+    "element": "electro",
+    "rarity": 5,
+    "image": "images/Keqing_Icon.png"
+  },
+  {
+    "name": "Klee",
+    "weapon": "catalyst",
+    "element": "pyro",
+    "rarity": 5,
+    "image": "images/Klee_Icon.png"
+  },
+  {
+    "name": "Kokomi",
+    "weapon": "catalyst",
+    "element": "hydro",
+    "rarity": 5,
+    "image": "images/Sangonomiya_Kokomi_Icon.png"
+  },
+  {
+    "name": "Lyney",
+    "weapon": "bow",
+    "element": "pyro",
+    "rarity": 5,
+    "image": "images/Lyney_Icon.png"
+  },
+  {
+    "name": "Mona",
+    "weapon": "catalyst",
+    "element": "hydro",
+    "rarity": 5,
+    "image": "images/Mona_Icon.png"
+  },
+  {
+    "name": "Nahida",
+    "weapon": "catalyst",
+    "element": "dendro",
+    "rarity": 5,
+    "image": "images/Nahida_Icon.png"
+  },
+  {
+    "name": "Navia",
+    "weapon": "claymore",
+    "element": "geo",
+    "rarity": 5,
+    "image": "images/Navia_Icon.png"
+  },
+  {
+    "name": "Neuvillette",
+    "weapon": "catalyst",
+    "element": "hydro",
+    "rarity": 5,
+    "image": "images/Neuvillette_Icon.png"
+  },
+  {
+    "name": "Nilou",
+    "weapon": "sword",
+    "element": "hydro",
+    "rarity": 5,
+    "image": "images/Nilou_Icon.png"
+  },
+  {
+    "name": "Qiqi",
+    "weapon": "sword",
+    "element": "cryo",
+    "rarity": 5,
+    "image": "images/Qiqi_Icon.png"
+  },
+  {
+    "name": "Raiden",
+    "weapon": "polearm",
+    "element": "electro",
+    "rarity": 5,
+    "image": "images/Raiden_Shogun_Icon.png"
+  },
+  {
+    "name": "Shenhe",
+    "weapon": "polearm",
+    "element": "cryo",
+    "rarity": 5,
+    "image": "images/Shenhe_Icon.png"
+  },
+  {
+    "name": "Tighnari",
+    "weapon": "bow",
+    "element": "dendro",
+    "rarity": 5,
+    "image": "images/Tighnari_Icon.png"
+  },
+  {
+    "name": "Venti",
+    "weapon": "bow",
+    "element": "anemo",
+    "rarity": 5,
+    "image": "images/Venti_Icon.png"
+  },
+  {
+    "name": "Wanderer",
+    "weapon": "catalyst",
+    "element": "anemo",
+    "rarity": 5,
+    "image": "images/Wanderer_Icon.png"
+  },
+  {
+    "name": "Wriothesley",
+    "weapon": "catalyst",
+    "element": "cryo",
+    "rarity": 5,
+    "image": "images/Wriothesley_Icon.png"
+  },
+  {
+    "name": "Xianyun",
+    "weapon": "catalyst",
+    "element": "anemo",
+    "rarity": 5,
+    "image": "images/Xianyun_Icon.png"
+  },
+  {
+    "name": "Xiao",
+    "weapon": "polearm",
+    "element": "anemo",
+    "rarity": 5,
+    "image": "images/Xiao_Icon.png"
+  },
+  {
+    "name": "Yae Miko",
+    "weapon": "catalyst",
+    "element": "electro",
+    "rarity": 5,
+    "image": "images/Yae_Miko_Icon.png"
+  },
+  {
+    "name": "Yelan",
+    "weapon": "bow",
+    "element": "hydro",
+    "rarity": 5,
+    "image": "images/Yelan_Icon.png"
+  },
+  {
+    "name": "Yoimiya",
+    "weapon": "bow",
+    "element": "pyro",
+    "rarity": 5,
+    "image": "images/Yoimiya_Icon.png"
+  },
+  {
+    "name": "Zhongli",
+    "weapon": "polearm",
+    "element": "geo",
+    "rarity": 5,
+    "image": "images/Zhongli_Icon.png"
+  },
+  {
+    "name": "Amber",
+    "weapon": "bow",
+    "element": "pyro",
+    "rarity": 4,
+    "image": "images/Amber_Icon.png"
+  }
+]

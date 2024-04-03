@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import characterData from "./assets/character-data.json";
+import CharacterCard from "./components/CharacterCard";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header"></header>
+      <div id="scrollable-container">
+        <h1>Genshin Characters</h1>
+        <div id="menu-container">
+          {characterData.map((item, index) => (
+            <CharacterCard index={index} />
+          ))}
+        </div>
+      </div>
+      <div id="cart-container">
+        <h2>My Lists</h2>
+      </div>
     </div>
   );
 }
