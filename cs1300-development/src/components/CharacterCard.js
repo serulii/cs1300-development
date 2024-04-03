@@ -1,7 +1,12 @@
-// TODO: create a component that displays a single bakery item
 import React from "react";
 import characterData from "../assets/character-data.json";
 import "./CharacterCard.css";
+import { FaRegHeart } from "react-icons/fa";
+import { FaRegCheckSquare } from "react-icons/fa";
+
+function getElement(element) {
+  return "images/elements/element_" + element + ".png";
+}
 
 function CharacterCard(props) {
   return (
@@ -11,13 +16,24 @@ function CharacterCard(props) {
           src={characterData[props.index].image}
           alt={characterData[props.index].name}
         ></img>
+        <img
+          id="element-img"
+          src={getElement(characterData[props.index].element)}
+          alt="element"
+        ></img>
       </div>
       <div id="item-desc">
         <h3>{characterData[props.index].name}</h3>
-        <p>{characterData[props.index].element}</p>
-        <p>{characterData[props.index].rarity}</p>
-        <p>{characterData[props.index].weapon}</p>
-        {/* <button onClick={() => props.addFunc(props.index)}>Add to Cart</button> */}
+        <div id="button-bar">
+          <button onClick={() => props.ownButton(props.index)}>
+            <FaRegCheckSquare />
+          </button>
+          <button onClick={() => props.likeButton(props.index)}>
+            <FaRegHeart />
+          </button>
+        </div>
+        {/* <p>{characterData[props.index].rarity}</p>
+        <p>{characterData[props.index].weapon}</p> */}
       </div>
     </div>
   );

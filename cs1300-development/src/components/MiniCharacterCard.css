@@ -1,0 +1,29 @@
+#mini-item-container {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: auto;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#mini-img {
+  width: 100px;
+  height: auto;
+}
+
+#del-button {
+  width: 30px;
+  height: auto;
+  padding: 0.1em 0.2em;
+  font-size: 1em;
+  transition: border-color 0.25s;
+  float: right;
+}
+
+#mini-item-desc {
+  margin: 0;
+  /* display: flex;
+  justify-content: center; */
+}
