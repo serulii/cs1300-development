@@ -16,6 +16,10 @@
   margin-right: 15px;
 }
 
+#weapon-desc {
+  font-size: 14px;
+}
+
 #element-img {
   width: 40px;
   height: auto;

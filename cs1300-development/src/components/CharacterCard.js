@@ -8,6 +8,11 @@ function getElement(element) {
   return "images/elements/element_" + element + ".png";
 }
 
+// I found this regex online for turning a string into title case!
+function titleCase(str) {
+  return str.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase());
+}
+
 function CharacterCard(props) {
   return (
     <div id="item-container">
@@ -24,6 +29,9 @@ function CharacterCard(props) {
       </div>
       <div id="item-desc">
         <h3>{characterData[props.index].name}</h3>
+        <p id="weapon-desc">
+          Weapon: {titleCase(characterData[props.index].weapon)}
+        </p>
         <div id="button-bar">
           <button onClick={() => props.ownButton(props.index)}>
             <FaRegCheckSquare />

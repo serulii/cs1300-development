@@ -7,7 +7,8 @@ import MiniCharacterCard from "./components/MiniCharacterCard";
 function App() {
   const [likeContents, setLikeContents] = useState([]);
   const [ownedContents, setOwnedContents] = useState([]);
-  const [displayChars, setDisplayChars] = useState([]);
+  const [currElement, setCurrElement] = useState("none");
+  const [currWeapon, setCurrWeapon] = useState("none");
 
   function likeCharacter(charIdx) {
     // Makes sure you don't add duplicates
@@ -62,71 +63,196 @@ function App() {
     );
   }
 
+  function filterElementHelper(character) {
+    if (currElement === "none") {
+      return true;
+    }
+    if (character.element === currElement) {
+      return true;
+    }
+    return false;
+  }
+
+  function filterWeaponHelper(character) {
+    if (currWeapon === "none") {
+      return true;
+    }
+    if (character.weapon === currWeapon) {
+      return true;
+    }
+    return false;
+  }
+
+  function resetFilters() {
+    setCurrElement("none");
+    setCurrWeapon("none");
+  }
+
+  function getMenuCharacters() {
+    return characterData
+      .filter(filterElementHelper)
+      .filter(filterWeaponHelper)
+      .map((item, index) => (
+        <CharacterCard
+          index={item.id}
+          likeButton={likeCharacter}
+          ownButton={ownCharacter}
+        />
+      ));
+  }
+
+  function applyElementFilter(element) {
+    if (currElement === element) {
+      setCurrElement("none");
+    } else {
+      setCurrElement(element);
+    }
+  }
+
+  function applyWeaponFilter(weapon) {
+    if (currWeapon === weapon) {
+      setCurrWeapon("none");
+    } else {
+      setCurrWeapon(weapon);
+    }
+  }
+
+  function buttonColor(buttonType) {
+    if (currElement === buttonType || currWeapon === buttonType) {
+      return { background: "#d9d9d9" };
+    }
+    return { background: "#eeeeee" };
+  }
+
   return (
     <div className="App">
       <header className="App-header"></header>
       <div id="scrollable-container">
         <h1>Genshin Impact Characters</h1>
         <div id="filter-sort-bar">
-          <button>
+          <button onClick={() => resetFilters()}>Reset Filters</button>
+          <button
+            style={buttonColor("anemo")}
+            onClick={() => applyElementFilter("anemo")}
+          >
             <img
               className="filter-img"
               src="images/elements/element_anemo.png"
               alt="Filter by Anemo element only"
             />
           </button>
-          <button>
+          <button
+            style={buttonColor("cryo")}
+            onClick={() => applyElementFilter("cryo")}
+          >
             <img
               className="filter-img"
               src="images/elements/element_cryo.png"
               alt="Filter by Cryo element only"
             />
           </button>
-          <button>
+          <button
+            style={buttonColor("dendro")}
+            onClick={() => applyElementFilter("dendro")}
+          >
             <img
               className="filter-img"
               src="images/elements/element_dendro.png"
               alt="Filter by Dendro element only"
             />
           </button>
-          <button>
+          <button
+            style={buttonColor("electro")}
+            onClick={() => applyElementFilter("electro")}
+          >
             <img
               className="filter-img"
               src="images/elements/element_electro.png"
               alt="Filter by Electro element only"
             />
           </button>
-          <button>
+          <button
+            style={buttonColor("geo")}
+            onClick={() => applyElementFilter("geo")}
+          >
             <img
               className="filter-img"
               src="images/elements/element_geo.png"
               alt="Filter by Geo element only"
             />
           </button>
-          <button>
+          <button
+            style={buttonColor("hydro")}
+            onClick={() => applyElementFilter("hydro")}
+          >
             <img
               className="filter-img"
               src="images/elements/element_hydro.png"
               alt="Filter by Hydro element only"
             />
           </button>
-          <button>
+          <button
+            style={buttonColor("pyro")}
+            onClick={() => applyElementFilter("pyro")}
+          >
             <img
               className="filter-img"
               src="images/elements/element_pyro.png"
               alt="Filter by Pyro element only"
             />
           </button>
-        </div>
-        <div id="menu-container">
-          {characterData.map((item, index) => (
-            <CharacterCard
-              index={index}
-              likeButton={likeCharacter}
-              ownButton={ownCharacter}
+          <button
+            style={buttonColor("bow")}
+            onClick={() => applyWeaponFilter("bow")}
+          >
+            <img
+              className="filter-img"
+              src="images/weapons/weapon_bow.png"
+              alt="Filter by bow users only"
             />
-          ))}
+          </button>
+          <button
+            style={buttonColor("catalyst")}
+            onClick={() => applyWeaponFilter("catalyst")}
+          >
+            <img
+              className="filter-img"
+              src="images/weapons/weapon_catalyst.png"
+              alt="Filter by catalyst users only"
+            />
+          </button>
+          <button
+            style={buttonColor("claymore")}
+            onClick={() => applyWeaponFilter("claymore")}
+          >
+            <img
+              className="filter-img"
+              src="images/weapons/weapon_claymore.png"
+              alt="Filter by claymore users only"
+            />
+          </button>
+          <button
+            style={buttonColor("polearm")}
+            onClick={() => applyWeaponFilter("polearm")}
+          >
+            <img
+              className="filter-img"
+              src="images/weapons/weapon_polearm.png"
+              alt="Filter by polearm users only"
+            />
+          </button>
+          <button
+            style={buttonColor("sword")}
+            onClick={() => applyWeaponFilter("sword")}
+          >
+            <img
+              className="filter-img"
+              src="images/weapons/weapon_sword.png"
+              alt="Filter by sword users only"
+            />
+          </button>
         </div>
+        <div id="menu-container">{getMenuCharacters()}</div>
       </div>
       <div id="lists-container">
         <h2>My Lists</h2>
