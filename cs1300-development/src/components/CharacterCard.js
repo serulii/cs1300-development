@@ -13,10 +13,21 @@ function titleCase(str) {
   return str.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase());
 }
 
+// function getBackgroundColor(rarity) {
+//   if (rarity === 4) {
+//     return { background: "#e5dfed" };
+//   } else {
+//     return { background: "#fcedbd" };
+//   }
+// }
+
 function CharacterCard(props) {
   return (
     <div id="item-container">
-      <div id="item-pic">
+      <div
+        // style={getBackgroundColor(characterData[props.index].rarity)}
+        id="item-pic"
+      >
         <img
           src={characterData[props.index].image}
           alt={characterData[props.index].name}

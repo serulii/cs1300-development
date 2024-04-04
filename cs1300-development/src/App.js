@@ -43,10 +43,13 @@ function App() {
       return <div>No characters liked!</div>;
     }
     return (
-      <div id="list-container">
-        {likeContents.map((item, index) => (
-          <MiniCharacterCard index={item} delete={deleteCharacterLikes} />
-        ))}
+      <div>
+        <p className="counter">Total wished: {likeContents.length}</p>
+        <div id="list-container">
+          {likeContents.map((item, index) => (
+            <MiniCharacterCard index={item} delete={deleteCharacterLikes} />
+          ))}
+        </div>
       </div>
     );
   }
@@ -55,10 +58,13 @@ function App() {
       return <div>No characters owned!</div>;
     }
     return (
-      <div id="list-container">
-        {ownedContents.map((item, index) => (
-          <MiniCharacterCard index={item} delete={deleteCharacterOwned} />
-        ))}
+      <div>
+        <p className="counter">Total owned: {ownedContents.length}</p>
+        <div id="list-container">
+          {ownedContents.map((item, index) => (
+            <MiniCharacterCard index={item} delete={deleteCharacterOwned} />
+          ))}
+        </div>
       </div>
     );
   }
@@ -124,13 +130,15 @@ function App() {
     return { background: "#eeeeee" };
   }
 
-  return (
-    <div className="App">
-      <header className="App-header"></header>
-      <div id="scrollable-container">
-        <h1>Genshin Impact Characters</h1>
-        <div id="filter-sort-bar">
-          <button onClick={() => resetFilters()}>Reset Filters</button>
+  function getFilterBar() {
+    return (
+      <div id="filter-bar">
+        <div>
+          <button style={{ padding: "14px" }} onClick={() => resetFilters()}>
+            Reset Filters
+          </button>
+        </div>
+        <div>
           <button
             style={buttonColor("anemo")}
             onClick={() => applyElementFilter("anemo")}
@@ -201,6 +209,8 @@ function App() {
               alt="Filter by Pyro element only"
             />
           </button>
+        </div>
+        <div>
           <button
             style={buttonColor("bow")}
             onClick={() => applyWeaponFilter("bow")}
@@ -252,16 +262,36 @@ function App() {
             />
           </button>
         </div>
+      </div>
+    );
+  }
+
+  function getSortBar() {
+    return (
+      <div id="sort-bar">
+        <button>Sort by default</button>
+        <button>Sort A-Z</button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="App">
+      <header className="App-header"></header>
+      <div id="scrollable-container">
+        <h1>Genshin Impact Characters</h1>
+        {getFilterBar()}
+        {getSortBar()}
         <div id="menu-container">{getMenuCharacters()}</div>
       </div>
       <div id="lists-container">
         <h2>My Lists</h2>
         <div id="likes">
-          <h3>Wishlist</h3>
+          <h3 id="list-header">Wishlist</h3>
           {getLikes()}
         </div>
         <div id="owned">
-          <h3>Characters I have</h3>
+          <h3 id="list-header">Characters I have</h3>
           {getOwned()}
         </div>
       </div>

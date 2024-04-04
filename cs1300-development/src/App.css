@@ -35,6 +35,9 @@
 
 #lists-container {
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 #list-container {
@@ -48,12 +51,30 @@
   padding-bottom: 10px;
 }
 
-#filter-sort-bar {
+#filter-bar {
   display: flex;
+  gap: 20px;
   margin-bottom: 10px;
+}
+
+#sort-bar {
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .filter-img {
   width: 35px;
   height: auto;
+}
+
+#list-header {
+  padding-bottom: 10px;
+}
+
+h3 {
+  padding-bottom: 3px;
+}
+
+.counter {
+  padding-bottom: 15px;
 }
