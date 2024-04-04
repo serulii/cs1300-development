@@ -142,7 +142,6 @@ function App() {
     ) {
       return { background: "#d9d9d9" };
     }
-    return { background: "#eeeeee" };
   }
 
   function getFilterBar() {
@@ -304,7 +303,7 @@ function App() {
     <div className="App">
       <header className="App-header"></header>
       <div id="scrollable-container">
-        <h1>Genshin Impact Characters</h1>
+        <h1>&#10024; Genshin Impact Characters</h1>
         {getFilterBar()}
         {getSortBar()}
         <div id="menu-container">{getMenuCharacters()}</div>
@@ -312,11 +311,11 @@ function App() {
       <div id="lists-container">
         <h2>My Lists</h2>
         <div id="likes">
-          <h3 id="list-header">Wishlist</h3>
+          <h3 id="list-header">&#10084;&#65039; Wishlist</h3>
           {getLikes()}
         </div>
         <div id="owned">
-          <h3 id="list-header">Characters I have</h3>
+          <h3 id="list-header">&#9989; Characters I have</h3>
           {getOwned()}
         </div>
       </div>

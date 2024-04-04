@@ -78,3 +78,8 @@ h3 {
 .counter {
   padding-bottom: 15px;
 }
+
+button:hover {
+  background-color: #d9d9d9;
+  transition: 0.2s;
+}
