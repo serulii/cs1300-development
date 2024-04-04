@@ -9,6 +9,7 @@ function App() {
   const [ownedContents, setOwnedContents] = useState([]);
   const [currElement, setCurrElement] = useState("none");
   const [currWeapon, setCurrWeapon] = useState("none");
+  const [sortType, setSortType] = useState("default");
 
   function likeCharacter(charIdx) {
     // Makes sure you don't add duplicates
@@ -92,12 +93,22 @@ function App() {
   function resetFilters() {
     setCurrElement("none");
     setCurrWeapon("none");
+    setSortType("default");
+  }
+
+  // Helper to sort alphabetically
+  function sortHelper(a, b) {
+    if (sortType === "default") {
+      return 0;
+    }
+    return a.name.localeCompare(b.name);
   }
 
   function getMenuCharacters() {
     return characterData
       .filter(filterElementHelper)
       .filter(filterWeaponHelper)
+      .sort(sortHelper)
       .map((item, index) => (
         <CharacterCard
           index={item.id}
@@ -124,7 +135,11 @@ function App() {
   }
 
   function buttonColor(buttonType) {
-    if (currElement === buttonType || currWeapon === buttonType) {
+    if (
+      currElement === buttonType ||
+      currWeapon === buttonType ||
+      sortType === buttonType
+    ) {
       return { background: "#d9d9d9" };
     }
     return { background: "#eeeeee" };
@@ -269,8 +284,18 @@ function App() {
   function getSortBar() {
     return (
       <div id="sort-bar">
-        <button>Sort by default</button>
-        <button>Sort A-Z</button>
+        <button
+          onClick={() => setSortType("default")}
+          style={buttonColor("default")}
+        >
+          Sort by default
+        </button>
+        <button
+          onClick={() => setSortType("alphabetical")}
+          style={buttonColor("alphabetical")}
+        >
+          Sort A-Z
+        </button>
       </div>
     );
   }
